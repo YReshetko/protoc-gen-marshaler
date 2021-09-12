@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "google/protobuf/descriptor.proto";
+
+package marshaler;
+option go_package = "github.com/YReshetko/protoc-gen-marshaler/proto";
+
+extend google.protobuf.MessageOptions {
+  optional bool enable = 50000;
+  optional string some_string = 50001;
+}
